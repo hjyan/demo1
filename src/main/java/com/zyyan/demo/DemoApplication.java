@@ -1,15 +1,18 @@
 package com.zyyan.demo;
 
-import com.sun.org.apache.xpath.internal.operations.String;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class DemoApplication  implements CommandLineRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class);
+        SpringApplication.run(DemoApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("init... method");
     }
 }
-
-
